@@ -41,9 +41,9 @@ def post_add_person_vaccinated():
 @bp_vaccine.route('/vaccination',methods = ['GET'])
 def get_all_vaccinated():
     
-    consulta = VaccineModel.query.all()
+    query = VaccineModel.query.all()
     
-    list_json = [ pessoa.to_json() for pessoa in consulta]
+    list_json = [ pessoa.to_json() for pessoa in query]
     print(list_json)
     
     return jsonify(list_json)
