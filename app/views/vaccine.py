@@ -43,7 +43,7 @@ def get_all_vaccinated():
     
     query = VaccineModel.query.all()
     
-    list_json = [ pessoa.to_json() for pessoa in query]
+    list_json = [ person.to_json() for person in query]
     print(list_json)
     
     return jsonify(list_json)
